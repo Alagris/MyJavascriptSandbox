@@ -3,10 +3,92 @@
 	{
 		"selected_items":
 		[
+			[
+				"o",
+				"outputValue"
+			],
+			[
+				"ra",
+				"randomSqrt"
+			],
+			[
+				"rq",
+				"randomSqrtInteger"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ran",
+				"randomSqrt"
+			],
+			[
+				"r",
+				"rand"
+			],
+			[
+				"th",
+				"threshold"
+			],
+			[
+				"P",
+				"PRIMES"
+			],
+			[
+				"ope",
+				"operation"
+			],
+			[
+				"op",
+				"operations"
+			],
+			[
+				"p",
+				"puzzleArea"
+			],
+			[
+				"di",
+				"div	Tag"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "MathPuzzles/index.html",
+			"settings":
+			{
+				"buffer_size": 791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "MathPuzzles/script/SimpleBasicMathPuzzles.js",
+			"settings":
+			{
+				"buffer_size": 3366,
+				"line_ending": "Unix",
+				"name": "SimpleBasicMathPuzzles"
+			}
+		},
+		{
+			"file": "Snippets/in-builtFuntionTest.js",
+			"settings":
+			{
+				"buffer_size": 542,
+				"line_ending": "Unix",
+				"name": "in-builtFuntionTest.js"
+			}
+		},
+		{
+			"file": "Snippets/jQueryEquivalents.js",
+			"settings":
+			{
+				"buffer_size": 838,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -40,10 +122,19 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox"
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/MathPuzzles",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/MathPuzzles/script",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/Snippets"
 	],
 	"file_history":
 	[
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/MathPuzzles/manifest.webapp",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/Snippets/langueFacts.js",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/Snippets/jQueryEquivalents.js",
+		"/Users/alagris/Documents/code/javascript/MyJavascriptSandbox/snippets.js",
+		"/Users/alagris/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/alagris/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/alagris/Downloads/Paczka_nr_588336945045739392.js",
 		"/Users/alagris/Documents/code/BetterAI/ShaderCompiler.cpp",
 		"/Volumes/Data shared/my/bin/EQD bot/startLink",
@@ -54,11 +145,11 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -68,6 +159,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"SimpleBasicMathPuzzles",
+			"refractor",
+			"format",
 			"cuzbuwad0"
 		],
 		"highlight": true,
@@ -92,8 +186,124 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "MathPuzzles/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "MathPuzzles/script/SimpleBasicMathPuzzles.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2827,
+								2827
+							]
+						],
+						"settings":
+						{
+							"auto_name": "SimpleBasicMathPuzzles",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1866.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Snippets/in-builtFuntionTest.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								140,
+								140
+							]
+						],
+						"settings":
+						{
+							"auto_name": "in-builtFuntionTest.js",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Snippets/jQueryEquivalents.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -103,7 +313,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{

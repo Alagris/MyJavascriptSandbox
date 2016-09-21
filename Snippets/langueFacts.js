@@ -150,3 +150,52 @@ try {
 	console.log(e);
 }
 console.log(e);
+
+
+
+////////////////////////////////
+//window.function
+function myFunction(a, b) {
+    return a * b;
+}
+myFunction(10,2);
+window.myFunction(10, 2);    // window.myFunction(10, 2) will also return 20
+
+
+////////////////////////////////
+//function this
+function myFunction() {
+    return this;
+}
+myFunction();// Will return the window object
+
+
+////////////////////////////////
+//function variable scope with this keyword
+firstName="Rainbow";
+lastName="Dash";
+var myObject = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+    fullName2: function() {
+        return firstName + " " + lastName;
+    }
+}
+
+myObject.fullName();//will return "John Doe"
+myObject.fullName2();//will return "Rainbow Dash"
+
+
+
+
+
+
+
+
+
+
+
+
