@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install-test' ]
+2 info using npm@3.8.9
+3 info using node@v6.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly idealTree:prePrune Javascript
+21 silly loadIdealTree Finishing
+22 silly currentTree Javascript
+23 silly idealTree Javascript
+24 silly generateActionsToTake Starting
+25 silly install generateActionsToTake
+26 silly generateActionsToTake Finishing
+27 silly diffTrees action count 0
+28 silly decomposeActions action count 0
+29 silly executeActions Starting
+30 silly install executeActions
+31 silly doSerial global-install 0
+32 silly doParallel fetch 0
+33 verbose correctMkdir /home/alagris/.npm/_locks correctMkdir not in flight; initializing
+34 verbose lock using /home/alagris/.npm/_locks/staging-77ef2bf2031b7c01.lock for /my/script/Javascript/node_modules/.staging
+35 silly doParallel extract 0
+36 silly doParallel preinstall 0
+37 silly doReverseSerial remove 0
+38 silly doSerial move 0
+39 silly doSerial finalize 0
+40 silly doSerial build 0
+41 silly doSerial global-link 0
+42 silly doParallel update-linked 0
+43 silly doSerial install 0
+44 silly doSerial postinstall 0
+45 verbose unlock done using /home/alagris/.npm/_locks/staging-77ef2bf2031b7c01.lock for /my/script/Javascript/node_modules/.staging
+46 silly executeActions Finishing
+47 silly rollbackFailedOptional Starting
+48 silly rollbackFailedOptional Finishing
+49 silly runTopLevelLifecycles Starting
+50 silly install runTopLevelLifecycles
+51 silly preinstall Javascript /my/script/Javascript/Javascript-1294ccfc
+52 info lifecycle undefined~preinstall: undefined
+53 silly lifecycle undefined~preinstall: no script for preinstall, continuing
+54 silly build Javascript
+55 info linkStuff !invalid#1
+56 silly linkStuff !invalid#1 has /my/script as its parent node_modules
+57 verbose linkBins !invalid#1
+58 verbose linkMans !invalid#1
+59 silly install Javascript /my/script/Javascript/Javascript-1294ccfc
+60 info lifecycle undefined~install: undefined
+61 silly lifecycle undefined~install: no script for install, continuing
+62 silly postinstall Javascript /my/script/Javascript/Javascript-1294ccfc
+63 info lifecycle undefined~postinstall: undefined
+64 silly lifecycle undefined~postinstall: no script for postinstall, continuing
+65 silly prepublish Javascript /my/script/Javascript/Javascript-1294ccfc
+66 info lifecycle undefined~prepublish: undefined
+67 silly lifecycle undefined~prepublish: no script for prepublish, continuing
+68 silly runTopLevelLifecycles Finishing
+69 silly install printInstalled
+70 warn enoent ENOENT: no such file or directory, open '/my/script/Javascript/package.json'
+71 warn Javascript No description
+72 warn Javascript No repository field.
+73 warn Javascript No README data
+74 warn Javascript No license field.
+75 verbose stack Error: ENOENT: no such file or directory, open '/my/script/Javascript/package.json'
+75 verbose stack     at Error (native)
+76 verbose cwd /my/script/Javascript
+77 error Linux 4.5.3-1-ARCH
+78 error argv "/usr/bin/node" "/usr/bin/npm" "install-test"
+79 error node v6.1.0
+80 error npm  v3.8.9
+81 error path /my/script/Javascript/package.json
+82 error code ENOENT
+83 error errno -2
+84 error syscall open
+85 error enoent ENOENT: no such file or directory, open '/my/script/Javascript/package.json'
+86 error enoent ENOENT: no such file or directory, open '/my/script/Javascript/package.json'
+86 error enoent This is most likely not a problem with npm itself
+86 error enoent and is related to npm not being able to find a file.
+87 verbose exit [ -2, true ]

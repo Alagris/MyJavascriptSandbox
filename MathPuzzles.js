@@ -3,69 +3,92 @@ const MEDIUM_NUMBER=MAX_NUMBER/2;
 const MIN_NUMBER = -MAX_NUMBER;
 const MEDIUM_MIN_NUMBER = MIN_NUMBER/2;
 //MAX_NUMBER > MEDIUM_NUMBER > 0 > MEDIUM_MIN_NUMBER > MIN_NUMBER
-function part(number,multipliedBy,added,_power,_isVariable){
-	//the part looks as follows:
-	// (number^_power)*multipliedBy + added
-	//multipliedBy,added,and _power could be other parts
-	return{
-		isVariable:_isVariable,//if true then thisNumber is just index of variable, not the actual number
-		thisNumber:number,
-		times:multipliedBy,
-		plus:added,
-		power:_power;
+var puzzleBoard = document.getElementById('puzzle');
+var OPERATIONS={
+	PLUS:'+',
+	MINUS:'-',
+	TIMES:"\\cdot",//latex
+	OVER:"\\over",//latex
+	random:function(){
+		var r=Math.random();
+		if(r<0.25){
+			return PLUS;
+		}else if(r<0.5){
+			return MINUS;
+		}else if(r<0.75){
+			return TIMES;
+		}else{
+			return OVER;
+		}
+	},
+	isMultiplication:function(operation){
+		if(operation===OPERATIONS.PLUS || operation===OPERATIONS.MINUS)return false;
+		return true;
+	},
+	isAddition:function(operation){
+		if(operation===OPERATIONS.PLUS || operation===OPERATIONS.MINUS)return true;
+		return false;
+	}
+	getOpposite:function(operation){
+		switch(operation){
+			case OPERATIONS.PLUS:
+				return OPERATIONS.MINUS;
+			case OPERATIONS.MINUS:
+				return OPERATIONS.PLUS;
+			case OPERATIONS.TIMES:
+				return OPERATIONS.OVER;
+			case OPERATIONS.OVER:
+				return OPERATIONS.TIMES;
+		}
+	}
+};
+
+function Part(f,o,s){
+	this.firstOperation=f;
+	this.originalNumber=o;
+	this.shiftNumber=s;
+}
+var p0 = new Part(OPERATIONS.PLUS,8,new Part(OPERATIONS.TIMES,new Part(OPERATIONS.PLUS,3,1),new Part(OPERATIONS.MINUS,5,1)));
+
+function stringifyPart(part){
+	var string ="";
+	if(part.originalNumber instanceof Part){
+		string = stringifyPart(part.originalNumber);
+		if(OPERATIONS.isMultiplication(part) && OPERATIONS.isAddition(part.originalNumber)){
+			string = " ( "+string+" ) ";
+		}
+	}else{
+		if(part.shiftNumber instanceof Part){
+		}else{
+			
+		}
+		
+	}
+	if(part.shiftNumber instanceof Part){
+		string += stringifyPart(part.shiftNumber);
+		if(OPERATIONS.isMultiplication(part) && OPERATIONS.isAddition(part.originalNumber)){
+			string = " ( "+string+" ) ";
+		}
 	}
 }
-function partRealNumber(number){
-	return part(number,1,0,1,false);
-}
+console.log(puzzleBoard);
+puzzleBoard.innerHTML="hi";
+
 
 var math = {
-	function randomWhole(max){
+	randomWhole:function(max){
 		return Math.ceil(Math.random()*max);
-	}
-	function randomWholeBetween(min,max){
+	},
+	randomWholeBetween:function (min,max){
 		return min+randomWhole(max);
-	}
-	function randomWholeBetweenExcept(min,max,exception){
+	},
+	randomWholeBetweenExcept:function (min,max,exception){
 		var tmp=randomWholeBetween(min,max);
 		while(tmp==exception){
 			tmp=randomWholeBetween(min,max);
 		}
 		return tmp;
 	}
-	function generateFalseEquation(variableIndex){
-		/*
-		a*x^2 + b*x + c = 0
-		b^2 < 4*a*c
-		if a>0
-		then b^2/4/a < c
-		if a<0
-		then b^2/4/a > c
-		*/
-		var whole = part(variableIndex,/*a=*/randomWholeBetweenExcept(MEDIUM_MIN_NUMBER,MEDIUM_NUMBER,0),undefined,2,true);
-		//whole = a*x^2
-		whole.plus = part(variableIndex,/*b=*/randomWholeBetween(MEDIUM_MIN_NUMBER,MEDIUM_NUMBER),undefined,1,true);
-		//whole.plus = b*x
-		if(whole.times>0){
-			whole.plus.plus = /*c=*/randomWholeBetween(whole.plus.times*whole.plus.times/whole.times/4,MEDIUM_NUMBER );
-		}else{
-			whole.plus.plus = /*c=*/randomWholeBetween(MEDIUM_MIN_NUMBER,whole.plus.times*whole.plus.times/whole.times/4);
-		}
-		return whole;
-	}
-	function generateTrueEquation(variableIndex){
-		return part(variableIndex,randomWhole(MAX_NUMBER),randomWhole(MAX_NUMBER),1,true);
-	}
-	this.generateEquation = function(countOfTrueParts,countOfFalseParts){
-		var equationPart;
-		if(countOfTrueParts>0){
-			equationPart = generateTrueEquation(0);
-			countOfTrueParts--;
-		}
-		while(countOfTrueParts>0){
-			equationPart
-		}
-		
-	}
+	
 
-}
+};
