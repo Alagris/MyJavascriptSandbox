@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math!</title>
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/javascript" src="script/SimpleBasicMathPuzzles.js"></script>
+</head>
+<body>
+	Puzzle to solve:
+	<br>
+	<div id="puzzle"></div>
+	<br>
+	<div align="center">
+		Answer:
+		<input type="number" id="answer" min="-10000" max="10000" step="0.5" value="0">
+		<button type="button" onclick="measure.displayTime();" >Ready!</button>
+		<button type="button" onclick="generateNext();" >Next Puzzle</button>
+		<div>(press enter = Ready)</div>
+		<div>(press escape = Next Puzzle)</div>
+		Complexity:<input type="number" id="complexity" min="3" max="10" step="1" value="3">
+	</div>
+</body>
+</html>
